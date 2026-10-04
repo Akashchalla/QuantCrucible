@@ -1,0 +1,14 @@
+pandas>=2.2
+numpy>=1.26
+scipy>=1.11
+statsmodels>=0.14
+matplotlib>=3.8
+requests>=2.31
+tabulate>=0.9
+markdown>=3.5
+pytest>=8.0
+yfinance>=0.2.50
+python-dotenv>=1.0
+psycopg[binary]>=3.1
+databento>=0.40
+pypdf>=4.0
