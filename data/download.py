@@ -42,12 +42,60 @@ HEADERS = {"User-Agent": "gqh-reversal-study/1.0 (academic hackathon; public dat
 def _fetch(url: str, dest: Path, force: bool) -> bytes:
     if dest.exists() and not force:
         return dest.read_bytes()
+
+    import shutil
+    import subprocess
+    import time
+
     dest.parent.mkdir(parents=True, exist_ok=True)
-    print(f"  downloading {url}")
-    resp = requests.get(url, headers=HEADERS, timeout=120)
-    resp.raise_for_status()
-    dest.write_bytes(resp.content)
-    return resp.content
+
+    curl = shutil.which("curl")
+    if curl:
+        print(f"  downloading {url} with curl")
+        try:
+            subprocess.run(
+                [
+                    curl,
+                    "-L",
+                    "--fail",
+                    "--silent",
+                    "--show-error",
+                    "--max-time",
+                    "60",
+                    url,
+                    "-o",
+                    str(dest),
+                ],
+                check=True,
+            )
+            if dest.exists() and dest.stat().st_size > 0:
+                return dest.read_bytes()
+        except subprocess.CalledProcessError:
+            if dest.exists():
+                dest.unlink()
+            print("  curl failed; falling back to Python requests")
+
+    last_exc = None
+    for attempt in range(1, 4):
+        try:
+            print(f"  downloading {url} with requests (attempt {attempt}/3)")
+            resp = requests.get(
+                url,
+                headers=HEADERS,
+                timeout=(10, 30),
+            )
+            resp.raise_for_status()
+            dest.write_bytes(resp.content)
+            return resp.content
+        except requests.RequestException as exc:
+            last_exc = exc
+            if attempt < 3:
+                wait = 2 ** (attempt - 1)
+                print(f"  request failed: {exc}")
+                print(f"  retrying in {wait}s...")
+                time.sleep(wait)
+
+    raise last_exc
 
 
 def parse_french_csv(text: str) -> pd.DataFrame:
