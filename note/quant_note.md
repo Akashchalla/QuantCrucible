@@ -3,7 +3,7 @@
 # Paid to Hold the Bag
 ## Liquidity provision is a high-VIX premium — at the daily horizon and at the opening auction — and that is exactly why it is hard to size
 
-<p class="meta">Gator Quant Hacks 2026 · Track 03 Systematic Trading · October 2026 · All numbers: <code>python run_all.py --oos</code> · <a href="https://github.com/srinivaspenumarthi/cursor_hack">github.com/srinivaspenumarthi/cursor_hack</a> · Hypotheses pre-registered in <code>HYPOTHESIS.md</code> (commit <code>0d0093d</code>, 2026-10-03 10:54 UTC) <code>HYPOTHESIS_B.md</code> (commit <code>fbd355a</code>, 11:53 UTC) and <code>HYPOTHESIS_C.md</code> (commit <code>6067ea1</code>, 18:14 UTC), each before its first backtest</p>
+<p class="meta">Gator Quant Hacks 2026 · Track 03 Systematic Trading · October 2026 · All numbers: <code>python run_all.py --oos</code> · <a href="https://github.com/Akashchalla/hacks">github.com/Akashchalla/hacks</a> · Hypotheses pre-registered in <code>srinivaspenumarthi/cursor_hack</code>: <code>HYPOTHESIS.md</code> (commit <code>0d0093d</code>, 2026-10-03 10:54 UTC) <code>HYPOTHESIS_B.md</code> (commit <code>fbd355a</code>, 11:53 UTC) and <code>HYPOTHESIS_C.md</code> (commit <code>6067ea1</code>, 18:14 UTC), each before its first backtest</p>
 
 </div>
 
