@@ -6,6 +6,12 @@ timestamp. The liquidity study in `HYPOTHESIS.md`, `HYPOTHESIS_B.md` and
 `HYPOTHESIS_C.md` is a separate, already-finished project. Its out-of-sample
 files are not an input to this study and are not recomputed here.
 
+**Public repository note:** This is a separate study (8-K buyback put-selling,
+run with `run_eightk.py` on Massive data), not part of the Systematic Trading
+quant note. This public repository was assembled after the
+research analysis, so its commit records publication of this file, not the
+original pre-registration timestamp. The text is unchanged.
+
 ## Edge source
 
 A board that announces a share-repurchase authorization is telling the market
