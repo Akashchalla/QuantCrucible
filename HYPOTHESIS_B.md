@@ -5,6 +5,11 @@ was finished and its out-of-sample window had been opened, and **before any
 single-stock price data was downloaded or any gap-fade number was computed.**
 The git commit that adds this file is the timestamp.
 
+**Public repository note:** The original pre-registration commit is `fbd355a`
+(2026-10-03 11:53 UTC) in `srinivaspenumarthi/cursor_hack`. This public
+repository was assembled after the research analysis, so its commit records
+publication of this file, not the original timestamp. The text is unchanged.
+
 ## Why a second module
 
 Module A established, on 36 years of Kenneth French portfolios, that the

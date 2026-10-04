@@ -6,14 +6,22 @@ Gator Quant Hacks 2026 · Track 03 Systematic Trading
 liquidity, and we test whether that premium is larger when liquidity-provider
 capital is scarce (proxied by the previous day's VIX).
 
-## Hypothesis
+## Hypotheses
 
-Full version: [HYPOTHESIS.md](HYPOTHESIS.md). Short version: short-term reversal
-is a payment for liquidity, and it is larger after VIX is high, because liquidity
-providers are capital-constrained. It is tested three ways: daily French
-reversal portfolios (A), an S&P 500 opening-auction gap fade (B), and the
-variance risk premium vs. realised variance (C). The held-out period
-**2024-09-01 → 2026-08-31** is evaluated once, at the end.
+Each hypothesis was written and committed **before** its first backtest, in
+`srinivaspenumarthi/cursor_hack`. The files here are verbatim copies; each one
+lists its original commit. Read them in order:
+
+| File | Module | Idea in one line | Original commit |
+|---|---|---|---|
+| [HYPOTHESIS.md](HYPOTHESIS.md) | **A** · daily reversal, 1990–2026 | The reversal premium is a payment for liquidity, and it rises with yesterday's VIX. | `0d0093d` · Oct 3, 10:54 UTC |
+| [HYPOTHESIS_B.md](HYPOTHESIS_B.md) | **B** · S&P 500 opening-auction gap fade | Same mechanism at the open: trade only when VIX ≥ 20 instead of levering up. | `fbd355a` · Oct 3, 11:53 UTC |
+| [HYPOTHESIS_C.md](HYPOTHESIS_C.md) | **C** · price vs. quantity of risk | The premium follows the variance risk premium, not realised variance. | `6067ea1` · Oct 3, 18:14 UTC |
+| [HYPOTHESIS_8K.md](HYPOTHESIS_8K.md) | Separate study · 8-K buybacks | Selling puts after a buyback announcement beats selling them on ordinary days. | Not part of the quant note |
+
+Shared rules for A–C: signals use only yesterday's data, every number is net of
+costs that rise with VIX, the held-out period **2024-09-01 → 2026-08-31** is
+evaluated once, and all **80 variants** are reported.
 
 ## Next steps (Devpost deadline: Sun Oct 4, 11:00 AM)
 
@@ -24,7 +32,6 @@ variance risk premium vs. realised variance (C). The held-out period
       `HYPOTHESIS_C.md`, `.env.example`.
 - [ ] **Never commit:** `.env`, `filing_edge/.env`, `voice_ui/.env`, `.venv/`,
       `__pycache__/`, `live/state/`, or raw data. Run `git status` before every commit.
-- [ ] Delete `HYPOTHESIS_AI_COPILOT.md` (it's now covered by `HYPOTHESIS.md`).
 
 **By 10:00: prove it reproduces**
 - [ ] Fresh clone in a new folder → `pip install -r requirements.txt` →
@@ -40,7 +47,7 @@ variance risk premium vs. realised variance (C). The held-out period
       (5 pages max, 11pt or larger; references and appendix don't count).
 - [ ] Note checklist: hypothesis stated before results, in-sample and out-of-sample results reported separately
       net of costs, Sharpe, max drawdown, turnover, an equity curve, by-year
-      breakdown, risk management section, capacity section, **78 variants disclosed**,
+      breakdown, risk management section, capacity section, **80 variants disclosed**,
       and what failed (the Module A leverage rule).
 
 **By 10:45: submit**

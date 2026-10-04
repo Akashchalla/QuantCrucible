@@ -5,6 +5,11 @@ held-out windows opened, and **before any variance-risk-premium or term-structur
 series was computed or regressed.** The git commit that adds this file is the
 timestamp.
 
+**Public repository note:** The original pre-registration commit is `6067ea1`
+(2026-10-03 18:14 UTC) in `srinivaspenumarthi/cursor_hack`. This public
+repository was assembled after the research analysis, so its commit records
+publication of this file, not the original timestamp. The text is unchanged.
+
 ## The open problem Modules A and B left
 
 Both modules found that the liquidity-provision premium rises with lagged VIX,
