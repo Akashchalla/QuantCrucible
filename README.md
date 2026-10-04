@@ -133,7 +133,7 @@ For the full voice setup, see [`FINAL_START.md`](FINAL_START.md) and
 
 ## Team
 
-Jyothi Nandhan Repaka · Akash Challa · Manikanta Srinivas Penumarthi
+Jyothi Nandhan Repaka · Akash Challa · Manikanta Srinivas Penumarthi . Ajitesh Reddy Byreddy
 
 ## Key references
 
