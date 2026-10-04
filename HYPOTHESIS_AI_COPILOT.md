@@ -1,87 +1,63 @@
-# Hypothesis: Evidence-Grounded AI for Quant Crucible
+# Hypothesis: High-Volatility States Strengthen Short-Term Equity Reversal
 
 ## Status
-Proposed hypothesis. Comparative evaluation has not yet been completed.
+
+Pre-specified research hypothesis. Results are evaluated separately
+in-sample and out-of-sample after transaction costs.
 
 ## Research Question
-Can an AI assistant grounded in our repository explain and challenge
-our systematic-trading research more accurately and transparently
-than a generic AI chat interface?
+
+Is short-term equity reversal stronger when market volatility is elevated,
+and can a volatility-conditioned strategy capture that effect after realistic
+trading costs?
 
 ## Main Hypothesis
-Combining repository evidence, deterministic Python calculations,
-Gemini explanations, and an ElevenLabs voice interface will produce
-more accurate, specific, auditable, and context-aware answers about
-Quant Crucible than a generic AI chat interface.
 
-Text and voice will use the same answer pipeline, preserving the
-selected symbol, date, module, and conversation context.
+We expect the U.S. equity short-term reversal premium to increase when
+lagged VIX is higher.
 
-This improvement should occur without changing the underlying
-trading strategies, risk controls, or execution logic.
+The economic intuition is that elevated volatility constrains liquidity
+providers and increases the compensation required to absorb temporary
+order-flow imbalances. If this mechanism is present, stocks experiencing
+short-term price dislocations should exhibit stronger subsequent reversal
+during high-volatility regimes.
 
-## Why We Expect This
-A generic AI assistant may give plausible market explanations without
-knowing what our system actually recorded.
+Therefore, a strategy that conditions reversal exposure on lagged VIX
+should achieve better risk-adjusted performance than an otherwise comparable
+unconditional strategy, after realistic transaction costs.
 
-Our proposed assistant will retrieve relevant hypotheses, backtest
-results, transaction-cost assumptions, risk-gate decisions, and
-paper-trading records before answering.
+## Pre-Specified Predictions
 
-Python will calculate numerical results. Gemini will explain the
-evidence. ElevenLabs will provide speech interaction.
+1. Subsequent reversal returns should increase with lagged VIX.
+2. High-VIX observations should exhibit stronger reversal than low-VIX observations.
+3. A VIX-conditioned strategy should outperform unconditional exposure on a
+   risk-adjusted basis.
+4. The relationship should survive realistic transaction costs.
+5. Results should remain directionally consistent in a held-out out-of-sample period.
 
-When evidence is missing, the assistant will state the limitation
-or ask a clarifying question.
+## Failure Conditions
 
-## Expected Behavior
-The assistant should:
-- Explain recorded strategy decisions using identifiable evidence.
-- Support numerical claims with reproducible calculations.
-- Distinguish actual results from hypothetical scenarios.
-- Separate verified facts from possible explanations.
-- Identify weaknesses in research, including small samples,
-  overfitting, and survivorship bias.
-- Preserve historical replay boundaries without revealing future
-  outcomes early.
-- Give consistent factual answers across text and voice.
+The hypothesis is not supported if:
 
-## Evaluation Plan
-Before testing, freeze a repository snapshot and prepare a fixed set
-of questions with reference answers supported by that snapshot.
+- reversal strength does not increase with lagged VIX;
+- the VIX-conditioned strategy does not improve risk-adjusted performance;
+- the effect disappears after transaction costs;
+- held-out results materially contradict the in-sample findings; or
+- performance depends primarily on a small number of extreme observations.
 
-Include questions about strategy decisions, costs, risk gates,
-research weaknesses, historical replay, and missing evidence.
+## Evaluation
 
-Compare:
-1. A generic Gemini chat interface without repository retrieval
-   or deterministic tools.
-2. The proposed repository-grounded Quant Crucible assistant.
+We report in-sample and out-of-sample results separately and include:
 
-Use the same Gemini model version and question set. Record the
-context and tools available to each system. Repeat trials to measure
-variation, and score answers without showing reviewers which
-system produced them.
+- net returns after costs;
+- Sharpe ratio;
+- maximum drawdown;
+- turnover;
+- equity curve;
+- year-by-year stability;
+- cost sensitivity;
+- threshold sensitivity;
+- bootstrap uncertainty;
+- dependence on extreme return days.
 
-Measure:
-- Factual and numerical correctness.
-- Whether cited evidence actually supports the answer.
-- Unsupported claims.
-- Appropriate handling of missing information.
-- Context retention across follow-up questions.
-- Factual consistency between text and voice.
-
-Set scoring rules and success thresholds before running the evaluation.
-
-## Null Hypothesis
-The repository-grounded assistant provides no measurable improvement
-over the generic interface on the predefined evaluation.
-
-## Limits
-Better explanations do not establish trading profitability or prove
-that the underlying research is valid.
-
-Repository evidence may itself be incomplete or biased. The assistant
-must expose these limitations rather than turn them into confident claims.
-
-Simulated paper-trading results must remain clearly identified.
+Failed or weaker related experiments are retained rather than removed.
