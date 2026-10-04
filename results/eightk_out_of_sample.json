@@ -1,0 +1,140 @@
+{
+  "study": "8k repurchase cash-secured puts",
+  "hypothesis": "HYPOTHESIS_8K.md",
+  "generated_utc": "2026-10-04T01:55:33.366506+00:00",
+  "start": "2026-01-01",
+  "end": "2026-08-31",
+  "out_of_sample": true,
+  "n_variants_pre_registered": 54,
+  "n_universe": 100,
+  "n_filings": 89,
+  "n_events_headline": 89,
+  "n_events_with_entry_price": 26,
+  "horizons_event_minus_control_bps": {
+    "1": {
+      "n": 14,
+      "mean": 43.147732526955735,
+      "se": 40.78715613573422,
+      "lo": -44.967561174938496,
+      "hi": 131.26302622884998,
+      "t": 1.0578754837274222
+    },
+    "2": {
+      "n": 15,
+      "mean": 48.683391766353594,
+      "se": 42.283977087402086,
+      "lo": -42.00671940292783,
+      "hi": 139.37350293563503,
+      "t": 1.151343726861921
+    },
+    "3": {
+      "n": 17,
+      "mean": 65.30812758203915,
+      "se": 60.652326841997024,
+      "lo": -63.269061500409876,
+      "hi": 193.8853166644882,
+      "t": 1.0767621125595193
+    },
+    "5": {
+      "n": 16,
+      "mean": -44.11714912822124,
+      "se": 66.19966899419623,
+      "lo": -185.21840352210836,
+      "hi": 96.98410526566589,
+      "t": -0.666425524455251
+    },
+    "10": {
+      "n": 15,
+      "mean": 124.64460385569599,
+      "se": 139.19600002807968,
+      "lo": -173.90112401593558,
+      "hi": 423.1903317273276,
+      "t": 0.8954611039868368
+    },
+    "21": {
+      "n": 3,
+      "mean": 1043.2459064327484,
+      "se": 1129.2972770422894,
+      "lo": -3815.728105331892,
+      "hi": 5902.219918197389,
+      "t": 0.9238009580303641
+    },
+    "42": {
+      "n": 0,
+      "mean": null,
+      "se": null,
+      "lo": null,
+      "hi": null,
+      "t": null
+    },
+    "63": {
+      "n": 0,
+      "mean": null,
+      "se": null,
+      "lo": null,
+      "hi": null,
+      "t": null
+    },
+    "expiry": {
+      "n": 14,
+      "mean": 164.19549051736752,
+      "se": 225.90989410226723,
+      "lo": -323.85316388599904,
+      "hi": 652.244144920734,
+      "t": 0.7268185006675175
+    }
+  },
+  "grid_21_session": [],
+  "cost_2x_haircut_10pct_21_session": {
+    "paired_mean_bps_21": {
+      "n": 3,
+      "mean": 1059.0005847953216,
+      "se": 1146.8427430625165,
+      "lo": -3875.465474235976,
+      "hi": 5993.4666438266195,
+      "t": 0.9234052281373625
+    },
+    "haircut": 0.1
+  },
+  "book_21_session": {
+    "ann_return": 0.10248970004688339,
+    "ann_vol": 0.12364524857414617,
+    "sharpe": 0.8289012414854222,
+    "max_drawdown": -0.0703919577711849,
+    "n_days": 86
+  },
+  "capacity_usd_5pct_of_entry_volume": 139825.0,
+  "kill": {
+    "diff_21_not_positive": false,
+    "interval_covers_zero_and_small": false,
+    "horizons_not_mostly_positive": false,
+    "neighbour_sign_flip": {
+      "haircut_10": false,
+      "otm_10": false,
+      "delay_2": false
+    },
+    "diff_21_mean_bps": 1043.2459064327484,
+    "diff_21_ci": [
+      -3815.728105331892,
+      5902.219918197389
+    ],
+    "positive_horizon_share": 0.8333333333333334
+  },
+  "data": {
+    "universe": "Massive grouped daily dollar volume, top 100 common stocks in 2022 (letter-only tickers)",
+    "filings": "SEC full-text 8-K index (Massive filings filters ignore cik/ticker/date; see HYPOTHESIS_8K.md)",
+    "acceptance": "SEC submissions JSON, including older filing pages when the accession is not in the latest thousand",
+    "option_bars": "Massive daily aggregates; Databento OPRA ohlcv-1d (OCC-padded raw symbol) only when Massive has no bar",
+    "option_bar_sources": {
+      "massive": 91,
+      "databento": 0,
+      "cache": 0,
+      "empty": 76
+    },
+    "databento_calls": 2,
+    "databento_spent_usd": 0.0,
+    "databento_skipped_budget": 0,
+    "databento_study_budget_usd": 40.0,
+    "store": "TigerData eightk_filings / eightk_option_bars when DATABASE_URL is set"
+  }
+}

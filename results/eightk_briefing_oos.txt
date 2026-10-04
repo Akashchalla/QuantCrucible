@@ -1,0 +1,11 @@
+Study window: 2026-01-01 to 2026-08-31. 
+Filings in top-100 universe: 89. 
+Headline events: 89. 
+
+For n=3, the 21-session event-minus-control mean is 1043.2459064327484 bps, with a 95% interval of -3815.728105331892 to 5902.219918197389 bps. The positive horizon share is 0.8333333333333334. 
+
+All kill flags are false: 
+- diff_21_not_positive: false
+- interval_covers_zero_and_small: false
+- horizons_not_mostly_positive: false
+- neighbour_sign_flip (haircut_10, otm_10, delay_2): false
