@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "window": [
+    "2023-06-01",
+    "2023-08-31"
+  ],
+  "mode": "sealed",
+  "credentials": "Massive only",
+  "fresh_kernel": true,
+  "workspace": "Explicit fresh workspace instead of system temp for local storage reliability.",
+  "note": "This example window was inspected for software replication; it is not claimed as an untouched future holdout."
+}

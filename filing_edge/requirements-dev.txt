@@ -1,0 +1,5 @@
+-r requirements.txt
+nbclient>=0.10,<0.11
+ipykernel>=6,<8
+reportlab>=4,<5
+pypdf>=5,<7

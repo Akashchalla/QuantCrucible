@@ -1,0 +1,8 @@
+.env
+.env.*
+.git
+.venv
+__pycache__
+**/__pycache__
+.massive_cache
+private_data

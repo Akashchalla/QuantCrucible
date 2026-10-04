@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "hypothesis": "Share-repurchase disclosures may alter the premium for downside protection; compare cash-secured puts after disclosures with same-issuer dates matched using only pre-entry option information.",
+  "quote_max_age_seconds": 120,
+  "maximum_relative_spread": 0.25,
+  "minimum_option_mid": 0.10,
+  "minimum_lagged_option_adv": 20,
+  "maximum_parity_disagreement": 0.03,
+  "maximum_risk_ratio": 1.5,
+  "maximum_dte_difference": 35,
+  "initial_capital": 1000000,
+  "issuer_fraction": 0.05,
+  "total_collateral_fraction": 0.50,
+  "adv_participation": 0.01,
+  "displayed_size_fraction": 0.25,
+  "drawdown_pause": 0.10,
+  "assignment_stress_fraction": 0.20,
+  "bootstrap_draws": 1999,
+  "max_events": 1000,
+  "network_workers": 6,
+  "research_status": "Development v1 has been inspected. This v2 methodology is frozen before the 2026 test. No new category or parameter is selected for profitable development results."
+}

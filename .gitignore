@@ -24,3 +24,21 @@ filing_edge/docs/data.js
 
 dist/
 build/
+live/state/
+*.log
+*.pid
+*.pem
+*.key
+.env
+.env.*
+!.env.example
+.venv/
+node_modules/
+__pycache__/
+.pytest_cache/
+.DS_Store
+data/raw/
+data/processed/
+.massive_cache/
+filing_edge/private_data/
+filing_edge/docs/data.js
