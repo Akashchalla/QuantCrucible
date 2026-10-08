@@ -1,4 +1,4 @@
-# Quant Crucible
+## Quant Crucible
 
 **Paid to Hold the Bag: liquidity provision is a high-fear premium, and that is
 exactly why it is hard to size.**
